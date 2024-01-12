@@ -1,0 +1,8 @@
+-This project purpose take handle RFM analysis with solve problem ultizing unsupervised 
+-ultize KMeans as model with parameter below:
+ -n_cluster =3, init='k-means++',n_init=10, max_iter=300, random_state=111, algorithm='elkan'
+
+-In the recency section, clusters 1 and 3 have almost the same value, while cluster 3 has a much higher value.
+-In the frequency section, clusters 1 and 2 have the same value, while cluster 2 has the highest value.
+-In the MonetaryValue section, the values are almost the same as in the Frequency section.
+-Overall, cluster 1 has stable values in each section.
