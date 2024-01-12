@@ -1,0 +1,15 @@
+Results
+
+    - The tfidf transformed plots performed better during modeling.
+    - GridSearchCV helped in narrowing down the best model hyperparameter values.
+    - The model with the best performance was the Logistic Regression Model on tfidf transformed plots with the following parameters:
+        C = 1.0
+        class_weight = 'None'
+        multi_class = 'multinomial'
+        penalty = 'l2'
+        solver = 'lbfgs'
+    - When the above model was used on the test set, it produced an accuracy score of ~62% which a significant increase from the baseline
+    - The confusion matrix confirms what I suspected when looking at the most common words in the genres.
+    - Due to the fact that some of the genres had words in common with another genre, false predictions of those genres were mostly as the genres they had common words with.
+    - The decision tree models performed the least favorably.
+
