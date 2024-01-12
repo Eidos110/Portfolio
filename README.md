@@ -19,8 +19,8 @@ Project Promotional Time Series
 ### **B.	RESULT SUMMARY**
 
 Project Predict movie genre
--	  The modified plot using tfidf provides better performance during modeling.
--	  GridSearchCV helps narrow down the values of the best model's hyperparameters.
+-   The modified plot using tfidf provides better performance during modeling.
+-   GridSearchCV helps narrow down the values of the best model's hyperparameters.
 -   The model with the best performance is the logisticRegression model on the plot modified using tfidf with the following parameters:
   C = 1.0, class_weight = 'None', multi_class = 'multinomial', penalty = 'l2', solver = 'lbfgs'
 - 	When the above model is used on the test set, it achieves an accuracy score of around 64%, which is a significant improvement from the baseline.
