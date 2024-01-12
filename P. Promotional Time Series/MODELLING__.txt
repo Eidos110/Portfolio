@@ -1,0 +1,15 @@
+This case about Sales with focusing effect from have or havent promotional happend. 
+to solve proble this we ulitize Time Series technique. 
+then we ultizing probhet as model
+
+This result of observation below:
+- The most selling and crowded Store is Store 10, and the least crowded store is Store 5.
+- In terms of number of units sold, the most selling product is product 2. In terms of sales dollars, Product 3 postd the highest sales during normal days. 
+- Stores do not necessarily run product promotions during holidays. Holidays do not seem to have an impact on Stores' performance.
+- Product 1 sells a little more during holidays, however, Product 2 and Product 3 sell less on holidays.
+- Product 2 seems to be the cheapest product, and Product 3 is the most expensive product.
+- Most stores have some kind of seasonality and they make the highest sales around July.
+- Product 1 sells a little more in February than the other months, Product 2 sells the most around April and July, and Product 3 sells the most around July.
+- In general, prodct 2 sells the most at Store 10, but in July, Product 3 has the highest sales in this store.
+- Each product has its regular price and promotional price. There isn't significant gap between regular price and promotional price on Product 1 and Product 2, however, Product 3's promotional price can be slashed to 50% of its original price. Although every store makes this kind of price cut for product 3, Store 10 is the one made the highest sales during the price cut.  
+- It is nothing unusual to sell more during promotion than the normal days. Store 10's made Product 3 the best selling product around July.
