@@ -1,50 +1,45 @@
-# Portfolio
+# Data Science Portfolio
 
+Welcome to my portfolio! This repository showcases three projects that demonstrate my skills in data analysis, machine learning, and time-series forecasting. These projects solve real-world problems related to customer behavior, content classification, and sales forecasting.
 
+## Projects Overview
 
-### **A.	BUSINESS UNDERSTANDING PROJECT**
+### 1. Customer Segmentation & RFM Analysis
+- **Objective**: Segment customers based on Recency, Frequency, and Monetary (RFM) metrics to enhance marketing strategies.
+- **Techniques**: RFM scoring, KMeans clustering.
+- **Key Insights**:
+  - Segmented customers into groups (`Low`, `Mid`, `High Value`) with special focus on `Champions` and `Potential Loyalists`.
+  - Found correlations among RFM metrics, suggesting targeted actions can enhance overall customer value.
+  - The majority of customers fell into high-value segments, providing an opportunity to reinforce loyalty with targeted campaigns.
 
-**Project Predict Movie genre**
--	Discover the captivating world of movies, a beloved form of entertainment enjoyed by millions worldwide. In this age of abundant streaming services and burgeoning websites, imagine the incredible potential of a predictive model that effortlessly identifies the genre of a movie based solely on its plot summary. By harnessing the power of technology, this groundbreaking approach has the power to significantly reduce the laborious task of manually tagging movies. Embrace the future of cinema organization and experience the countless benefits of automated genre generation.
+### 2. Predict Movie Genre
+- **Objective**: Automate the classification of movie genres using plot summaries.
+- **Techniques**: Natural Language Processing (TF-IDF), Logistic Regression, Decision Trees.
+- **Key Insights**:
+  - Identified genre-specific language patterns, helping differentiate genres like `drama` and `action`.
+  - Logistic Regression achieved the highest accuracy (~64%), though overlapping themes made some genres challenging to distinguish.
+  - Adding metadata (e.g., cast, director) could improve accuracy and better capture subtle differences between genres.
 
+### 3. Promotional Time Series Analysis
+- **Objective**: Analyze and forecast the impact of promotional campaigns on sales.
+- **Techniques**: Prophet model for time-series forecasting.
+- **Key Insights**:
+  - Promotions led to significant sales increases, especially for Product 3 and Store 10, highlighting effective discount strategies.
+  - Seasonal trends were found across products and stores, with sales peaking during holidays.
+  - Time-series forecasting with the Prophet model effectively captured sales trends and provided actionable predictions, especially when holiday seasonality was considered.
 
-**Project Customer Segmentation & RFM Analysis**
--	Understanding customers and tailoring strategies to their needs is crucial for success. RFM analysis segments customers based on recency, frequency, and monetary value, helping you target valuable customers. With our project, gain insights into customer behavior and identify patterns to create targeted campaigns and personalized offers. Reward loyal customers and optimize pricing, inventory, and product offerings. Identify at-risk customers with RFM analysis, retain them, and increase customer lifetime value. Uncover hidden patterns, make data-driven decisions, and optimize your business strategies with our project. Don't miss out on understanding your customers and unlocking growth opportunities
+## Summary of Results
+- **Customer Segmentation**: Enabled targeted marketing to maximize customer lifetime value.
+- **Movie Genre Prediction**: Showed the potential and limitations of NLP in genre classification, with room for feature enhancement.
+- **Sales Forecasting**: Provided valuable insights into the effectiveness of promotions and the timing of campaigns.
 
+## Tools & Technologies
+- **Languages**: Python
+- **Libraries**: scikit-learn, pandas, matplotlib, Prophet, NLTK, Plotly
+- **Tools**: Jupyter Notebook, GitHub
 
-**Project Promotional Time Series**
--	Analyzing promotional activities is crucial for business success. This project uses time-series data to provide insights into the effectiveness of promotions. With Project Promotional Time Series, understand the correlation between promotions and key metrics. Uncover optimal timing, duration, and nature of campaigns to maximize impact. Predict future outcomes and make data-driven decisions to allocate resources effectively. Empower your business to drive growth and increase profitability with this project. Don't miss out on unlocking new opportunities - harness the power of data to propel your business to new heights
+## About This Portfolio
+Each project in this portfolio addresses a specific business problem—whether it’s understanding customer behavior, automating content classification, or optimizing sales strategies. This collection illustrates the power of data-driven insights in decision-making.
 
-
-### **B.	RESULT SUMMARY**
-
-**Project Predict movie genre**
--   The modified plot using tfidf provides better performance during modeling.
--   GridSearchCV helps narrow down the values of the best model's hyperparameters.
--   The model with the best performance is the logisticRegression model on the plot modified using tfidf with the following parameters:
-  C = 1.0, class_weight = 'None', multi_class = 'multinomial', penalty = 'l2', solver = 'lbfgs'
-- 	When the above model is used on the test set, it achieves an accuracy score of around 64%, which is a significant improvement from the baseline.
-- 	The Confusion Matrix confirms what I suspected when looking at common words in those genres.
-- 	Because some genres have the same words as other genres, false predictions for those genres mainly occur in genres with similar words.
-- 	The decision tree model has the least favorable performance
-
-
-
-**Project Customer Segmentation & RFM Analysis**
-- 	The goal of this project is to perform RFM analysis using unsupervised methods to solve the problem.
-- 	The model used is KMeans with the following parameters:
-    n_cluster = 3, init='k-means++', n_init=10, max_iter=300, random_state=111, algorithm='elkan'
-- 	In the recency part, cluster 1 and 3 have almost the same values, while cluster 3 has significantly higher values.
-- 	In the frequency part, cluster 1 and 2 have the same values, while cluster 2 has the highest value.
-- 	In the MonetaryValue part, the values are almost the same as the Frequency part.
-- 	Overall, cluster 1 has stable values in each part.
-
-
-
-**Project Promotional Time Series**
-- 	This case is related to sales with a focus on the effect of having or not having promotions.
-- 	To solve this problem, we use Time Series techniques. Then we use the Prophet model.
-- 	Most stores have some seasonal patterns and they record the highest sales around July.
-- 	Each product has a regular price and a promotional price. There is no significant difference between the regular price and the promotional price for Product 1 and Product 2, but the promotional price   for Product 3 can be reduced by 50% from its original price. Although every store offers discounts for this product, Store 10 has the highest sales during the discount period.
-- 	It is not surprising that sales are higher during promotions compared to regular days. Store 10 makes Product 3 the best-selling product around July.
-
+## License
+Licensed under the [Apache-2.0 License](LICENSE).
