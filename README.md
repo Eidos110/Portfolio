@@ -20,13 +20,33 @@ Welcome to my portfolio! This repository showcases three projects that demonstra
   - Logistic Regression achieved the highest accuracy (~64%), though overlapping themes made some genres challenging to distinguish.
   - Adding metadata (e.g., cast, director) could improve accuracy and better capture subtle differences between genres.
 
-### 3. Promotional Time Series Analysis
+### 3. Promotion Time Series Forecasting
 - **Objective**: Analyze and forecast the impact of promotional campaigns on sales.
-- **Techniques**: Prophet model for time-series forecasting.
 - **Key Insights**:
-  - Promotions led to significant sales increases, especially for Product 3 and Store 10, highlighting effective discount strategies.
-  - Seasonal trends were found across products and stores, with sales peaking during holidays.
-  - Time-series forecasting with the Prophet model effectively captured sales trends and provided actionable predictions, especially when holiday seasonality was considered.
+  - **All stores & products sell more during promotions**no exceptions.
+  - **Product 3** (most expensive, base price `~$20.70`) sees `~50%` price cuts during promotions and jumps from `88 → 400` avg. units sold.
+  - **Store 10** is the top performer: `200,924` total units, `$1.76M` revenue.
+  - **Holidays show no consistent sales lift** non-holiday weeks often outperform.
+  - **Strong monthly seasonality** in Store 10 and Product 3.
+- **Forecasting with Prophet**
+  - **Target**: Weekly sales ( `Price × Weekly_Units_Sold`) for Store 10, Product 3
+  - **Baseline model** (standard Prophet):
+    - **RMSE = 1,190.10**
+  - **Enhanced model**: Added two custom seasonalities:
+    - `school_holiday_season (months 6–8)`
+    - `not_school_holiday_season (rest of the year)`
+  - **Result: RMSE = 1,125.73 (5.4% improvement)**
+  - **Forecast horizon: 50 weeks ahead**
+- **Techniques**
+  - **Methods**: EDA with ECDFs & facet grids, feature engineering, time series decomposition, RMSE evaluation.
+  - **Visualization**: Interactive Plotly line charts, Seaborn seasonal trends, Prophet component plots.
+
+- **Why it Matters**
+  - Debunks myth: Holiday = sales boost → false
+  - Validates strategy: Promotional pricing is the real lever for demand
+  - Enables planning: Accurate 50-week forecasts support inventory & pricing decisions for the highest-value segment
+
+
 
 ## Summary of Results
 - **Customer Segmentation**: Enabled targeted marketing to maximize customer lifetime value.
@@ -35,7 +55,7 @@ Welcome to my portfolio! This repository showcases three projects that demonstra
 
 ## Tools & Technologies
 - **Languages**: Python
-- **Libraries**: scikit-learn, pandas, matplotlib, Prophet, NLTK, Plotly
+- **Libraries**: scikit-learn, pandas, matplotlib, Prophet, NLTK, Plotly, Seaborn
 - **Tools**: Jupyter Notebook, GitHub
 
 ## About This Portfolio
